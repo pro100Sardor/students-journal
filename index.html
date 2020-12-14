@@ -19,23 +19,25 @@
   <main class="page__main page-main">
     <div class="page-main__container container">
       <div class="row">
-        <div class="col-4">
+        <div class="col-12 col-lg-4 mb-5 mb-lg-0">
           <select class="page-main__students-selector custom-select" id="studentsSelector">
             <option selected="selected" disabled="disabled" hidden="hidden">Select the student</option>
           </select>
         </div>
-        <div class="col-8">
+        <div class="col-12 col-lg-8">
           <p class="page-main__students-name" id="studentName"></p>
-          <table class="table table-bordered table-hover d-none" id="studentInfoTable">
-            <thead>
-              <tr>
-                <th>Date of the lesson</th>
-                <th>Score</th>
-                <th>Was student attend the lesson</th>
-              </tr>
-            </thead>
-            <tbody id="student-info-table__body"></tbody>
-          </table>
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover d-none" id="studentInfoTable">
+              <thead>
+                <tr>
+                  <th>Date of the lesson</th>
+                  <th>Score</th>
+                  <th>Was student attend the lesson</th>
+                </tr>
+              </thead>
+              <tbody id="student-info-table__body"></tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
