@@ -1,8 +1,7 @@
 let elStudents = document.querySelector('#studentsSelector');
 let elStudentName = document.querySelector('#studentName');
 let elStudentInfoTable = document.querySelector('#studentInfoTable');
-let elStudentInfoTableBody = elStudentInfoTable.querySelector('#js-student-info-table__body');
-let elStudentInfoTableTemplate = document.querySelector('#studentInfoTableTemplate').content;
+let elStudentInfoTableBody = elStudentInfoTable.querySelector('#student-info-table__body');
 
 let studentSelectorFragment = document.createDocumentFragment();
 
@@ -10,7 +9,9 @@ students.forEach(student => {
   let studentOption = document.createElement('option');
 
   studentOption.classList.add("page-main__students-option");
+
   studentOption.value = student.id;
+
   studentOption.textContent = `${student.firstName} ${student.lastName}`;
 
   studentSelectorFragment.appendChild(studentOption);
@@ -20,7 +21,7 @@ elStudents.appendChild(studentSelectorFragment);
 
 function studentSelector(evt) {
   elStudentName.textContent = '';
-  elSelectedStudent = students.find(student => student.id === Number(elStudents.value));
+  let elSelectedStudent = students.find(student => student.id === Number(elStudents.value));
   elStudentName.textContent = `${elSelectedStudent.firstName} ${elSelectedStudent.lastName}'s information`;
 
   elStudentInfoTableBody.innerHTML = '';
